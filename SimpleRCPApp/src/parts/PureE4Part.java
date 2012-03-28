@@ -27,20 +27,20 @@ public class PureE4Part {
 	public PureE4Part(Logger logger) {
 		//label = new Label(parent, SWT.NONE);
 		this.logger = logger;
-		logger.info("Clean 4.x part created");
+		logger.info("Pure 4.x part created");
 	}
 	
 	@PostConstruct
 	public void createUI(Composite parent) {
 		label = new Label(parent, SWT.NONE);
 		disabled = false;
-		logger.info("Clean 4.x part UI created and enabled");
+		logger.info("Pure 4.x part UI created and enabled");
 	}
 
 	@PreDestroy
 	public void destroy() {
 		disabled = true;
-		logger.info("Clean 4.x part disabled and destroyed");
+		logger.info("Pure 4.x part disabled and destroyed");
 	}
 	
 	@Inject

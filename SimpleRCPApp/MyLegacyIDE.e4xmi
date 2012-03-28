@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xsi:schemaLocation="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic http://www.eclipse.org/ui/2010/UIModel/application#//ui/basic" xmi:id="org.eclipse.e4.legacy.ide.application" elementId="org.eclipse.e4.legacy.ide.application" bindingContexts="_SeXUHO8EEd6BC9cDb6iV7y">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="IDEWindow" elementId="IDEWindow" width="1024" height="768"/>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xsi:schemaLocation="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic http://www.eclipse.org/ui/2010/UIModel/application#//ui/basic http://www.eclipse.org/ui/2010/UIModel/application/ui/menu http://www.eclipse.org/ui/2010/UIModel/application#//ui/menu" xmi:id="org.eclipse.e4.legacy.ide.application" elementId="org.eclipse.e4.legacy.ide.application" bindingContexts="_SeXUHO8EEd6BC9cDb6iV7y">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="IDEWindow" elementId="IDEWindow" width="1024" height="768">
+    <mainMenu xmi:id="_F8RUAHd_EeG7_cHHqv-b4g" elementId="simple.test">
+      <children xsi:type="menu:Menu" xmi:id="_TcmsgHd_EeG7_cHHqv-b4g" elementId="simple.test.menu" label="TestMenuWhichGetsHiddenAfterRestart">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_NN35YHd_EeG7_cHHqv-b4g" elementId="simple.test.menu.showview" label="Show View..." command="e4.show.view"/>
+      </children>
+    </mainMenu>
+  </children>
   <handlers xmi:id="_UW9TY_r3Ed6gmo7caOxU9g" elementId="_UW9TY_r3Ed6gmo7caOxU9g" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.ExitHandler" command="e4.exit"/>
   <handlers xmi:id="_BESTZfr3Ed6gmo7caOxU04" elementId="_BESTZfr3Ed6gmo7caOxU04" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.internal.workbench.swt.handlers.ShowViewHandler" command="e4.show.view"/>
   <handlers xmi:id="_eTBRgAFSEd-Z8rQksLwRYw" elementId="org.eclipse.e4.ui.saveHandler" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.handlers.SaveHandler" command="_jR5mUAFSEd-Z8rQksLwRYw"/>
@@ -17,6 +23,11 @@
     <children xmi:id="_SeXUEO8EEd6FC9cDb6iV7x" elementId="org.eclipse.ui.contexts.dialog" name="%bindingcontext.name.dialogs"/>
   </rootContext>
   <descriptors xmi:id="_4mqVUHIOEeGksete1DMPjg" elementId="simplercpapp.puree4part" label="Pure e4 Part" category="org.eclipse.e4.secondaryDataStack" contributionURI="bundleclass://SimpleRCPApp/parts.PureE4Part"/>
+  <menuContributions xmi:id="_z_1uMHd_EeG7_cHHqv-b4g" elementId="" parentId="org.eclipse.ui.main.menu">
+    <children xsi:type="menu:Menu" xmi:id="_2JmQAHd_EeG7_cHHqv-b4g" elementId="test2" label="SurvivingMenu">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_46WgYHd_EeG7_cHHqv-b4g" elementId="test2.showview" label="Show View" command="e4.show.view"/>
+    </children>
+  </menuContributions>
   <commands xmi:id="e4.exit" elementId="e4.exit" commandName="%command.name.exit" description=""/>
   <commands xmi:id="e4.show.view" elementId="e4.show.view" commandName="%command.name.showView">
     <parameters xmi:id="_oRr6EAFSEd-Z8rQksLwRYz" elementId="org.eclipse.ui.views.showView.viewId" name="View"/>
